@@ -1,0 +1,568 @@
+/* basic setup*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: blanchedalmond;
+    overflow-x: hidden;
+    font-family: 'Della Respira', serif;
+       
+  }
+/*Grid setup*/  
+.flower-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 40% 10% 30% 5%;
+    grid-template-areas: 
+    'titel'
+    'bloem'
+    'knop'
+    'gedicht'
+    'made';
+}
+
+/*header*/
+header {
+    grid-area: titel;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 35px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: deeppink;
+    /*animation: color-icon 5s ease-in 1s normal forwards;*/
+}
+
+header i{
+    color: deeppink;
+    /*animation: color-icon 5s ease-in 1s normal forwards;*/
+}
+
+@keyframes color-icon{
+    10% {
+        font-size: 10px;
+        color: pink;
+    }
+    30% {
+        font-size: 15px;
+        color: salmon;
+    }
+    50% {
+        font-size: 20px;
+        color:violet;
+    }
+    70% {
+        font-size: 20px;
+        color: deeppink;
+    }
+    100% {
+        font-size: 30px;
+        color: fuchsia;
+    }
+}
+/*animatie*/
+svg{
+    grid-area: bloem;
+    border: 5px solid green;
+    width: 380px;
+    height: 480px;
+    margin: auto;
+    animation: svg-bgcolor 10s ease-in 1s normal forwards;
+}
+@keyframes svg-bgcolor {
+    0%{
+        background-image: url(./vijver.jpg);
+        opacity: 0.2;
+    }
+    25%{
+        background-image: url(./vijver.jpg);
+        opacity: 0.5;
+    }
+    50%{
+        background-image: url(./vijver.jpg);
+        opacity: 0.7;
+    }
+    100%{
+        background-image: url(./vijver.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+.flower-gedicht{
+    grid-area: gedicht;
+    visibility: hidden;
+    text-align: center;
+    color: transparent;
+    margin-left: 25px;
+    z-index: 1;
+}
+.show-poem{
+    animation: show-gedicht 1s ease-in 1s normal forwards;
+}
+@keyframes show-gedicht{
+    0%{
+       visibility: hidden;
+    }
+    40%{
+        visibility: visible;
+        color: blanchedalmond;
+        
+    }
+    50%{
+        color: bisque;
+        visibility: visible;
+    }
+    80%{
+        color: lightgreen;
+        visibility: visible;
+       
+    }
+    100%{
+        color: darkgreen;
+        padding: 15px;
+        visibility: visible;
+        font-size: 15px;
+    }
+}
+
+/*button*/
+
+.flower-button{
+    grid-area: knop;
+}
+button {
+    width: 300px;
+    height: 100px;
+    background: transparent;
+    border: transparent;
+    margin-top: 15px;
+    margin-left: 50%;
+}
+
+
+button img{
+    width: 300px;
+    height: 200px;
+    margin-left: -250px;
+}
+
+.hide-btn{
+    visibility: hidden;
+}
+.audio{
+    display: none;
+}
+/*tekst*/
+.flower-text{
+    font-size: 20px;
+    font-weight: bold;
+    color:darkgreen;
+    text-align: center;
+}
+
+.footer-text{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    color: darkgreen;
+}
+/*footer*/
+footer {
+    grid-area: made;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*svg animatie*/
+#Blad {
+    fill: transparent;
+    stroke: lightgreen;
+    stroke-dasharray: 843;
+    stroke-dashoffset: 843;
+    animation: drawlines 1s ease forwards 0s,fillline-blad 0.5s ease forwards 1s;
+}
+
+#knop1A {
+    fill:transparent;
+    stroke: goldenrod;
+    stroke-dasharray: 223;
+    stroke-dashoffset: 223;
+    animation: drawlines 1s ease forwards 1s,fillline-knop 0.5s ease forwards 2s;
+}
+#knop1B {
+    fill:transparent;
+    stroke: goldenrod;
+    stroke-dasharray: 205.25;
+    stroke-dashoffset: 205.25;
+    animation: drawlines 1s ease forwards 1.5s,fillline-knop 0.5s ease forwards 2.5s;
+}
+#knop1C {
+    fill:transparent;
+    stroke: goldenrod;
+    stroke-dasharray: 305.6;
+    stroke-dashoffset: 305.6;
+    animation: drawlines 1s ease forwards 2s,fillline-knop 0.5s ease forwards 3s;
+}
+
+#BloemA {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 0.56515;
+    stroke-dashoffset: 0.56515;
+
+}
+#BloemB {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 0.399614;
+    stroke-dashoffset: 0.399614;
+}
+#BloemC {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 0.5651588;
+    stroke-dashoffset: 0.5651588;
+}
+#BloemD {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 336.7981872558594;
+    stroke-dashoffset: 336.7981872558594;
+}
+#BloemE {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 1357;
+    stroke-dashoffset: 1357;
+}
+#BloemF {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 923;
+    stroke-dashoffset: 923;
+}
+#BloemG {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+}
+#BloemH {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+}
+#BloemI {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+}
+#BloemJ {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+}
+#BloemK {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+}
+#BloemL {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+}
+#BloemM {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 621.4;
+    stroke-dashoffset: 621.4;
+}
+#BloemN {
+    fill: transparent;
+    stroke: lightsalmon;
+    stroke-dasharray: 672.7;
+    stroke-dashoffset: 672.7;
+}
+#BloemO {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 436.6;
+    stroke-dashoffset: 436.6;
+}
+#BloemP {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 582;
+    stroke-dashoffset: 582;
+}
+#BloemQ {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 485;
+    stroke-dashoffset: 485;
+}
+#BloemR {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 88.2;
+    stroke-dashoffset: 88.2;
+}
+#BloemS {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 114.25;
+    stroke-dashoffset: 114.25;
+}
+#BloemT {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 97.35;
+    stroke-dashoffset: 97.35;
+}
+#BloemU {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 55.57;
+    stroke-dashoffset: 55.57;
+}
+#BloemV {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 111.27;
+    stroke-dashoffset: 111.27;
+}
+#BloemW {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 51.78;
+    stroke-dashoffset: 51.78;
+}
+#BloemX {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 66.01;
+    stroke-dashoffset: 66.01;
+}
+#BloemY {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 24.6;
+    stroke-dashoffset: 24.6;
+}
+#BloemZ {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 59.02;
+    stroke-dashoffset: 59.02;
+}
+#Bloema {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 443.7;
+    stroke-dashoffset: 443.7;
+}
+
+#Bloemb {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 25.12;
+    stroke-dashoffset: 25.12;
+}
+
+#Bloemc {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 514.67;
+    stroke-dashoffset: 514.67;
+}
+#Bloemd {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 532.81;
+    stroke-dashoffset: 532.81;
+}
+#Bloeme {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 101.65;
+    stroke-dashoffset: 101.65;
+}
+#Bloemf {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 444.62;
+    stroke-dashoffset: 444.62;
+}
+#Bloemg {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 0.3996;
+    stroke-dashoffset: 0.3996;
+}
+#Bloemh {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 0.3996;
+    stroke-dashoffset: 0.3996;
+}
+#Bloemi {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 31.99;
+    stroke-dashoffset: 31.99;
+}
+#Bloemj {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 27.61;
+    stroke-dashoffset: 27.61;
+}
+#Bloemk {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 386.81;
+    stroke-dashoffset: 386.81;
+}
+#Bloeml {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 097.23;
+    stroke-dashoffset: 097.23;
+}
+#Bloemm {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 266.64;
+    stroke-dashoffset: 266.64;
+}
+#Bloemn {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 1.682;
+    stroke-dashoffset: 1.682;
+}
+#Bloemo {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 190.23;
+    stroke-dashoffset: 190.23;
+}
+#Bloemp {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 093.96;
+    stroke-dashoffset: 093.96;
+}
+#Bloemq {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 0.3996;
+    stroke-dashoffset: 0.3996;
+}
+#Bloemr {
+    fill:transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 00.3996;
+    stroke-dashoffset: 00.3996;
+}
+
+.grow {
+    animation: drawlines 1s ease forwards 0s,fillline 0.5s ease forwards 1s;
+}
+
+@keyframes drawlines {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillline {
+    to {
+        fill:lightsalmon;
+    }
+}
+@keyframes fillline-blad {
+    to {
+        fill:forestgreen;
+    }
+}
+@keyframes fillline-knop {
+    from {
+        fill:transparent
+    }
+    to {
+        fill:gold;
+    }
+}
+
+@keyframes toonbloem{
+    to {
+        fill: white;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .flower-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 50% 10% 30% 5%;
+    grid-template-areas: 
+    'titel'
+    'bloem'
+    'knop'
+    'gedicht'
+    'made';
+}
+    header, header i{
+        animation: color-icon 5s ease-in 1s normal forwards;
+        margin-top: 10px;
+    }
+    svg{
+        width: 500px;
+        margin-top: -10px;
+    }
+   .button-section{
+      transform: translateY(-100px);
+   }
+   .flower-gedicht{
+       transform: translateY(-100px);
+   }
+
+}
+@media only screen and (min-width: 1300px){
+    .flower-container {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 20% 70% 10%;
+    grid-template-areas: 
+    'titel titel titel'
+    'gedicht bloem knop'
+    'made made made';
+}
+header, header i{
+    margin-bottom: 10px;
+}
+svg{
+    margin: 0px;
+}
+.button-section{
+    transform: translateY(40px);
+}
+.flower-gedicht{
+    transform: translateY(40px);
+}
+.show-poem{
+    animation: show-gedicht 1s ease-in 8s normal forwards;
+}
+.footer{
+    transform: translateY(80px);
+}
+}
